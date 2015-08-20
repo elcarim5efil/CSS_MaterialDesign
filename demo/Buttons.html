@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<style>
+		/* display style */
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #444;
+		}
+		div {
+			margin: 15px;
+		}
+
+		h2{
+			color: #fff;
+		}
+		/* display style end */
+
+		/* Material Design Style Button */
+		.md-btn{
+			width: 100px;
+			height: 33px;
+			background: #2196F3;
+			color: #fff;
+			border: 0;
+			position: relative;
+			overflow: hidden;
+			text-transform: uppercase;
+			text-align: center;
+			outline: none;
+
+			-webkit-transition: all 0.8s ease;
+			-moz-transition: all 0.8s ease;
+			-o-transition: all 0.8s ease;
+			-ms-transition: all 0.8s ease;
+			transition: all 0.8s ease;
+
+			box-shadow: 0 0 4px 1px #333;
+		}
+		.md-btn:not(:active)::after{
+			content:"";
+			background: rgba(255, 255, 255, 0.5);
+			top: 50%;
+			left: 50%;
+			margin-top: -1%;
+			margin-left: -1%;
+			position: absolute;
+
+			width: 2%;
+			height: 6%;
+			border-radius: 200%;
+			opacity: 0;
+
+			animation: md-btn-spread 0.6s linear;
+			-o-animation: md-btn-spread 0.6s linear;
+			-moz-animation: md-btn-spread 0.6s linear;
+			-webkit-animation: md-btn-spread 0.6s linear;
+		}
+		.md-btn::after{			/* if this is non-existed, it won't work on firefox */
+			content:"";
+		}
+		.md-btn:hover{
+			filter: brightness(1.2);
+			-o-filter: brightness(1.2);
+			-moz-filter: brightness(1.2);
+			-webkit-filter: brightness(1.2);
+
+			box-shadow: 0 0 6px 3px #333;
+			-o-box-shadow: 0 0 6px 3px #333;
+			-moz-box-shadow: 0 0 6px 3px #333;
+			-webkit-box-shadow: 0 0 6px 3px #333;
+		}
+
+		@keyframes md-btn-spread{
+			0% {
+				margin-top: -1%;
+				margin-left: -1%;
+				width: 2%;
+				height: 6%;
+				opacity: 1;
+			}
+			100%{
+				margin-top: -100%;
+				margin-left: -100%;
+				width: 200%;
+				height: 600%;
+				opacity: 0;
+			}
+		}
+		@-o-keyframes md-btn-spread{
+			0% {
+				margin-top: -1%;
+				margin-left: -1%;
+				width: 2%;
+				height: 6%;
+				opacity: 1;
+			}
+			100%{
+				margin-top: -100%;
+				margin-left: -100%;
+				width: 200%;
+				height: 600%;
+				opacity: 0;
+			}
+		}
+		@-webkit-keyframes md-btn-spread{
+			0% {
+				margin-top: -1%;
+				margin-left: -1%;
+				width: 2%;
+				height: 6%;
+				opacity: 1;
+			}
+			100%{
+				margin-top: -100%;
+				margin-left: -100%;
+				width: 200%;
+				height: 600%;
+				opacity: 0;
+			}
+		}
+		
+		.green{
+			background-color: #4CAF50;
+		}
+		
+		.orange{
+			background-color: #FA6F3E;
+		}
+		
+		.red{
+			background-color: #F44336;
+		}
+
+		.purple{
+			background-color: #D500F9;
+		}
+
+		.pink{
+			background-color: #F50057;
+		}
+		
+		.md-btn-small{
+			width: 84px;
+			height: 28px;
+		}
+		.md-btn-large{
+			width: 150px;
+			height: 50px;
+		}
+		/* Material Design Style Button End*/
+		
+
+	</style>
+</head>
+<body>
+	<h2>Normal Button</h2>
+	<hr>
+	<div>
+		<div>
+			<button type="" class='md-btn'>Default</button>	
+		</div>
+		<div>
+			<button type="" class='md-btn green'>Green</button>
+		</div>
+		<div>
+			<button type="" class='md-btn orange'>Orange</button>
+		</div>
+		<div>
+			<button type="" class='md-btn red'>Red</button>
+		</div>
+		<div>
+			<button type="" class='md-btn purple'>Purple</button>
+		</div>
+		<div>
+			<button type="" class='md-btn pink'>Pink</button>
+		</div>
+	</div>
+
+	<h2> Small Button</h2>
+	<hr>
+	<div>
+		<div>
+		<button type="" class='md-btn md-btn-small'>Default</button>	
+		</div>
+		<div>
+			<button type="" class='md-btn green md-btn-small'>Green</button>
+		</div>
+		<div>
+			<button type="" class='md-btn orange md-btn-small'>Orange</button>
+		</div>
+		<div>
+			<button type="" class='md-btn red md-btn-small'>Red</button>
+		</div>
+		<div>
+			<button type="" class='md-btn purple md-btn-small'>Purple</button>
+		</div>
+		<div>
+			<button type="" class='md-btn pink md-btn-small'>Pink</button>
+		</div>
+	</div>
+
+	<h2> Large Button</h2>
+	<hr>
+	<div>
+		<div>
+		<button type="" class='md-btn md-btn-large'>Default</button>	
+		</div>
+		<div>
+			<button type="" class='md-btn green md-btn-large'>Green</button>
+		</div>
+		<div>
+			<button type="" class='md-btn orange md-btn-large'>Orange</button>
+		</div>
+		<div>
+			<button type="" class='md-btn red md-btn-large'>Red</button>
+		</div>
+		<div>
+			<button type="" class='md-btn purple md-btn-large'>Purple</button>
+		</div>
+		<div>
+			<button type="" class='md-btn pink md-btn-large'>Pink</button>
+		</div>
+	</div>
+	
+</body>
+</html>
