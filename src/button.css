@@ -1,0 +1,115 @@
+/* Material Design Style Button */
+.md-btn{
+	width: 100px;
+	height: 33px;
+	background: #2196F3;
+	color: #fff;
+	border: 0;
+	position: relative;
+	overflow: hidden;
+	text-transform: uppercase;
+	text-align: center;
+	outline: none;
+
+	-o-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	-moz-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	-webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+}
+.md-btn:hover::before{
+	content:"";
+	position: absolute;
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0.1),
+		rgba(255, 255, 255, 0.1) 100%
+	);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.md-btn:not(:active)::after{
+	content:"";
+	background: rgba(255, 255, 255, 0.5);
+	top: 50%;
+	left: 50%;
+	margin-top: -50%;
+	margin-left: -50%;
+	position: absolute;
+
+	width: 100%;
+	height: 300%;
+	border-radius: 200%;
+	opacity: 0;
+
+	-o-animation: md-btn-spread .5s linear;
+	-moz-animation: md-btn-spread .5s linear;
+	-webkit-animation: md-btn-spread .5s linear;
+	animation: md-btn-spread .5s linear;
+}
+.md-btn::after{			/* if this is non-existed, it won't work on firefox */
+	content:"";
+}
+.md-btn:hover{
+	-o-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 17px 0 rgba(0, 0, 0, 0.2), inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+	-moz-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 17px 0 rgba(0, 0, 0, 0.2), inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+	-webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 17px 0 rgba(0, 0, 0, 0.2), inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+	box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.19), 0 4px 17px 0 rgba(0, 0, 0, 0.2), inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+@-o-keyframes md-btn-spread{
+	0% {
+		transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+@-webkit-keyframes md-btn-spread{
+	0% {
+		transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+@-moz-keyframes md-btn-spread{
+	0% {
+		transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+@keyframes md-btn-spread{
+	0% {
+		transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
+.md-btn-small{
+	width: 84px;
+	height: 28px;
+}
+.md-btn-large{
+	width: 150px;
+	height: 50px;
+}
+/* Material Design Style Button End*/

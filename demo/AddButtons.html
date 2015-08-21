@@ -7,7 +7,9 @@
 			margin: 0;
 			padding: 0;
 		}
-
+		body{
+			/*background: #333;*/
+		}
 		.md-add{
 			width: 40px;
 			height: 40px;
@@ -17,6 +19,7 @@
 			color: #fff;
 			position: relative;
 			outline: none;
+			overflow: hidden;
 
 			background-image:linear-gradient(
 				0deg,
@@ -27,10 +30,10 @@
 			background-size: 30% 5%;
 			background-repeat:no-repeat;
 
-			box-shadow: 0 0 4px 1px #333;
 			-o-box-shadow: 0 0 4px 1px #333;
 			-moz-box-shadow: 0 0 4px 1px #333;
 			-webkit-box-shadow: 0 0 4px 1px #333;
+			box-shadow: 0 0 4px 1px #333;
 
 			-webkit-transition: all 0.8s ease;
 			-moz-transition: all 0.8s ease;
@@ -38,6 +41,7 @@
 			-ms-transition: all 0.8s ease;
 			transition: all 0.8s ease;
 		}
+		
 		.md-add::before{
 			content: "";
 			position: absolute;
@@ -64,77 +68,69 @@
 			margin-left: -50%;
 			margin-top: -50%;
 			opacity: 0;
+			
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, 0.3);
 
-			background-image: radial-gradient(
-				circle,
-				rgba(255, 255, 255, .3),
-				rgba(255, 255, 255, .3) 50%,
-				transparent 50%,
-				transparent
-			);
-			background-size: 10% 10%;
+			background-size: 100% 100%;
 			background-position: center center;
 			background-repeat:no-repeat;
-			animation: md-add-spread 0.6s linear;
+
 			-o-animation: md-add-spread 0.6s linear;
 			-moz-animation: md-add-spread 0.6s linear;
 			-webkit-animation: md-add-spread 0.6s linear;
+			animation: md-add-spread 0.6s linear;
 		}
 
 		.md-add:hover{
-			filter: brightness(1.2);
-			-o-filter: brightness(1.2);
-			-moz-filter: brightness(1.2);
-			-webkit-filter: brightness(1.2);
-
-			box-shadow: 0 0 6px 3px #333;
-			-o-box-shadow: 0 0 6px 3px #333;
-			-moz-box-shadow: 0 0 6px 3px #333;
-			-webkit-box-shadow: 0 0 6px 3px #333;
+			-o-box-shadow: 0 0 6px 3px #333, inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+			-moz-box-shadow: 0 0 6px 3px #333, inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+			-webkit-box-shadow: 0 0 6px 3px #333, inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+			box-shadow: 0 0 6px 3px #333, inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 		}
 
-		@keyframes md-add-spread{
-			0%{
-				background-size: 10% 10%;
-				opacity: 1;
-			}
-			100%{
-				background-size: 300% 300%;
-				opacity: 0;
-			}
-		}
 		@-o-keyframes md-add-spread{
 			0%{
-				background-size: 10% 10%;
+				transform: scale(0.1);
 				opacity: 1;
 			}
 			100%{
-				background-size: 300% 300%;
+				transform: scale(2);
 				opacity: 0;
 			}
 		}
 		@-moz-keyframes md-add-spread{
 			0%{
-				background-size: 10% 10%;
+				transform: scale(0.1);
 				opacity: 1;
 			}
 			100%{
-				background-size: 300% 300%;
+				transform: scale(2);
 				opacity: 0;
 			}
 		}
 		@-webkit-keyframes md-add-spread{
 			0%{
-				background-size: 10% 10%;
+				transform: scale(0.1);
 				opacity: 1;
 			}
 			100%{
-				background-size: 300% 300%;
+				transform: scale(2);
+				opacity: 0;
+			}
+		}
+		@keyframes md-add-spread{
+			0%{
+				transform: scale(0.1);
+				opacity: 1;
+			}
+			100%{
+				transform: scale(2);
 				opacity: 0;
 			}
 		}
 
-		.md-del::before{
+		.md-min::before{
 			display: none;
 		}
 
@@ -181,12 +177,12 @@
 		<button class='md-add pink'></button>
 
 		<hr>
-		<button class='md-add md-del'></button>
-		<button class='md-add md-del green'></button>
-		<button class='md-add md-del orange'></button>
-		<button class='md-add md-del red'></button>
-		<button class='md-add md-del purple'></button>
-		<button class='md-add md-del pink'></button>
+		<button class='md-add md-min'></button>
+		<button class='md-add md-min green'></button>
+		<button class='md-add md-min orange'></button>
+		<button class='md-add md-min red'></button>
+		<button class='md-add md-min purple'></button>
+		<button class='md-add md-min pink'></button>
 
 		<hr>
 		<button class='md-add md-add-small'></button>
