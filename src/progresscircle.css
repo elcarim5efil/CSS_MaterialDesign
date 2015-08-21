@@ -1,0 +1,174 @@
+.progresscircle {
+	display: block;
+	position: relative;
+	width: 66px;
+	height: 66px;
+	/*border-radius: 50%;*/
+	/*background-color: #eee;*/
+	margin: 20px;
+	
+	animation: progresscircle-spin-1 1568ms infinite linear both;
+}
+
+.inner-left{
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	/*background-color: #999;*/
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	transform-origin:100% 50%;
+	animation: progresscircle-spin-2 5332ms infinite cubic-bezier(0.4, 0, 0.2, 1) both, fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+}
+.progresscircle .inner-left::after{
+	display: block;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 3px #2196F3 solid;
+	border-bottom-color: transparent !important;
+	border-right-color: transparent !important;
+	-webkit-transform: rotate(129deg);
+    transform: rotate(129deg);
+	animation: inner-spin-left 1333ms infinite cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.inner-right{
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	/*background-color: #999;*/
+	top: 0;
+	left: 50%;
+	overflow: hidden;
+	transform-origin: 0% 50%;
+	animation: progresscircle-spin-2 5332ms infinite cubic-bezier(0.4, 0, 0.2, 1) both, fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+}
+.progresscircle .inner-right::after{
+	display: block;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -33px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 3px #2196F3 solid;
+	border-bottom-color: transparent !important;
+	border-left-color: transparent !important;
+	-webkit-transform: rotate(-129deg);
+    transform: rotate(-129deg);
+	animation: inner-spin-right 1333ms infinite cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+
+.gap-patch {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 45%;
+	width: 10%;
+	height: 100%;
+	overflow: hidden;
+	border-color: inherit;
+}
+
+.gap-patch::before {
+	content: "";
+	width: 1000%;
+	left: -450%;
+}
+
+@keyframes progresscircle-spin-1{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes fade-in-out {
+  from {
+    opacity: 1; }
+
+  25% {
+    opacity: 1; }
+
+  26% {
+    opacity: 0; }
+
+  89% {
+    opacity: 0; }
+
+  90% {
+    opacity: 1; }
+
+  100% {
+    opacity: 1; }
+}
+
+@keyframes progresscircle-spin-2{
+  /* 0.5 * ARCSIZE */
+  /* 1   * ARCSIZE */
+  /* 1.5 * ARCSIZE */
+  /* 2   * ARCSIZE */
+  /* 2.5 * ARCSIZE */
+  /* 3   * ARCSIZE */
+  /* 3.5 * ARCSIZE */
+  /* 4   * ARCSIZE */
+  12.5% {
+    transform: rotate(135deg); }
+
+  25% {
+    transform: rotate(270deg); }
+
+  37.5% {
+    transform: rotate(405deg); }
+
+  50% {
+    transform: rotate(540deg); }
+
+  62.5% {
+    transform: rotate(675deg); }
+
+  75% {
+    transform: rotate(810deg); }
+
+  87.5% {
+    transform: rotate(945deg); }
+
+  to {
+    transform: rotate(1080deg); }
+}
+
+@-webkit-keyframes inner-spin-left{
+  from {
+    -webkit-transform: rotate(130deg); }
+
+  50% {
+    -webkit-transform: rotate(-5deg); }
+
+  to {
+    -webkit-transform: rotate(130deg); }
+}
+
+@-webkit-keyframes inner-spin-right {
+  from {
+    -webkit-transform: rotate(-130deg); }
+
+  50% {
+    -webkit-transform: rotate(5deg); }
+
+  to {
+    -webkit-transform: rotate(-130deg); } }
+
