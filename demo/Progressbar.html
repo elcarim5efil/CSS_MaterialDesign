@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+<head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			margin: 10px;
+			padding: 10px;
+		}
+		body{
+			background-color: #333;
+			color: #fff;
+		}
+		.md-progressbar{
+			width: 400px;
+			height: 6px;
+			border-radius: 3px;
+			color: #fff;
+			background: #2196F3;
+			position: relative;
+			overflow: hidden
+		}
+
+		.md-progressbar .determinate{
+			position: absolute;
+			top: 0;
+			left: 0; 
+			height: 100%;
+			background-color: rgba(0, 0, 0, .0);
+		}
+
+
+		.md-progressbar .determinate::before{
+			content:"";
+			position: absolute;
+			top: 0;
+			left: 100%;
+			height: 100%;
+			width: 50000px;
+			background-color: rgba(255, 255, 255, .6);
+		}
+
+		.md-progressbar .indeterminate{
+			position: absolute;
+			top: 0;
+			left: 0; 
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0, 0, 0, .0);
+		}
+		.md-progressbar .indeterminate::before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0%;
+			height: 100%;
+			background-color: rgba(255, 255, 255, .6);
+			-webkit-animation: md-indeterminate-loop 2s ease-in-out infinite;
+			-o-animation: md-indeterminate-loop 2s ease-in-out infinite;
+			-moz-animation: md-indeterminate-loop 2s ease-in-out infinite;
+			animation: md-indeterminate-loop 2s ease-in-out infinite;
+		}
+
+		@-webkit-keyframes md-indeterminate-loop{
+			0%{
+				width: 0%;
+				left: 0%;
+			}
+			50%{
+				width: 100%;
+				left: 0%;
+			}
+			100%{
+				left: 100%;
+				width: 0%;
+			}
+		}
+
+		@-moz-keyframes md-indeterminate-loop{
+			0%{
+				width: 0%;
+				left: 0%;
+			}
+			50%{
+				width: 100%;
+				left: 0%;
+			}
+			100%{
+				left: 100%;
+				width: 0%;
+			}
+		}
+
+		@-o-keyframes md-indeterminate-loop{
+			0%{
+				width: 0%;
+				left: 0%;
+			}
+			50%{
+				width: 100%;
+				left: 0%;
+			}
+			100%{
+				left: 100%;
+				width: 0%;
+			}
+		}
+
+		@keyframes md-indeterminate-loop{
+			0%{
+				width: 0%;
+				left: 0%;
+			}
+			50%{
+				width: 100%;
+				left: 0%;
+			}
+			100%{
+				left: 100%;
+				width: 0%;
+			}
+		}
+
+		.green{
+			background-color: #4CAF50;
+		}
+
+		.orange{
+			background-color: #FA6F3E;
+		}
+
+		.red{
+			background-color: #F44336;
+		}
+
+		.purple{
+			background-color: #D500F9;
+		}
+
+		.pink{
+			background-color: #F50057;
+		}
+
+		.dark{
+			background-color: #212121;
+		}
+
+		.bluegrey{
+			background-color: #263238;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h2>Determinate Progress Bar</h2>
+	<hr>
+	<div class='container'>
+		<div class="md-progressbar">
+			<div class="determinate" style="width:25%;"></div>
+		</div>
+	</div>
+	
+	<div class='container'>
+		<div class="md-progressbar orange">
+			<div class="determinate" style="width:50%;"></div>
+		</div>
+	</div>
+
+	<div class='container'>
+		<div class="md-progressbar red">
+			<div class="determinate" style="width:88%;"></div>
+		</div>
+	</div>
+
+
+	<h2>Indeterminate Progress Bar</h2>
+	<hr>
+	<div class='container'>
+		<div class="md-progressbar green">
+			<div class="indeterminate"></div>
+		</div>
+	</div>
+
+	<div class='container'>
+		<div class="md-progressbar purple" style="height:16px;">
+			<div class="indeterminate"></div>
+		</div>
+	</div>
+	
+</body>
+
+</html>
