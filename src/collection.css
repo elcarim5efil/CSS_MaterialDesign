@@ -1,0 +1,44 @@
+.collection{
+	display: block;
+	padding: 0;
+	width: 100%;
+	list-style-type: none;
+	list-style-position:inside;
+	color: #333;
+}
+.collection.border li{
+	border: 1px solid #ddd;
+	margin-bottom: -1px;
+}
+.collection li, .collection a{
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	text-indent: 1em;
+	line-height: 3;
+	position: relative;
+	outline: 0;
+}
+.collection a::after{
+	content:"";
+	background-color: rgba(0,0,0,0.1);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition-property: all;
+	transition: .2s linear;
+	opacity: 0
+}
+.collection a:visited{
+	text-decoration: none;
+	color: inherit;
+}
+.collection a:hover::after{
+	opacity: 1;
+}
+.collection a:focus{
+	background-color: #44AFFB;
+	color: white;
+}
