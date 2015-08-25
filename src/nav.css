@@ -1,0 +1,156 @@
+.nav {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	color: #fff;
+	background-color: #40C038;
+	position: relative;
+	-o-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	-moz-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	-webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);;
+}
+
+.nav > ul{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.nav > ul > li{
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.nav > ul > li > .nav-header{
+	font-size: 2em;
+	line-height: 2;
+	padding: 0 25px;
+}
+.nav > ul > li > .nav-header:hover::after{
+	opacity: 0;
+}
+
+
+.nav > ul > li > a {
+	display: inline-block;
+	text-decoration: none;
+	outline: 0;
+	line-height: 4;
+	height: 100%;
+	width: 100%;
+	padding: 0 15px;
+}
+
+.nav > ul > li > a:visited,
+.nav > ul > li > a:link {
+	color: inherit;
+}
+
+.nav > ul > li > a::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(255,255,255,0.25);
+	transition-property: opacity;
+	transition: .2s ease;
+	opacity: 0;
+}
+
+.nav > ul > li > a:hover::after{
+	opacity: 1;
+}
+/* Side navigator*/
+.nav-side {
+	display: block;
+	overflow: hidden;
+	width: 200px;
+	/*color: #000;*/
+	color: #fff;
+	background-color: #2AB5F4;
+	padding: 0;
+	-o-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	-moz-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	-webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);;
+}
+
+.nav-side > ul{
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	list-style-position: left;
+}
+
+.nav-side > ul > a{
+	display: block;
+	text-decoration: none;
+	line-height: 3;
+	text-indent: 2em;
+	padding: 0;
+	position: relative;
+}
+
+.nav-side > ul > a:visited,
+.nav-side > ul > a:link {
+	color: inherit;
+}
+
+.nav-side > ul > a::after{
+	content:"";
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255,255,255,0.25);
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition-property: opacity;
+	transition: .2s ease;
+	opacity: 0;
+}
+
+.nav-side > ul > a:hover::after{
+	opacity: 1;
+}
+
+.nav-side > ul .nav-header{
+	text-align: center;
+	text-indent: 0;
+	line-height: 3;
+	font-size: 1.5em;
+}
+
+.nav-side > ul .nav-header:hover::after{
+	opacity: 0;	
+}
+
+.nav.fix, .nav-side.fix{
+	position: fixed;
+	top: 5px;
+}
+
+.nav-side.fix.left{
+	position: fixed;
+	left: 10px;
+	top: 5px;
+}
+
+.nav-side.fix.right{
+	position: fixed;
+	right: 10px;
+	top: 5px;
+}
+
+/* side navigator end */
