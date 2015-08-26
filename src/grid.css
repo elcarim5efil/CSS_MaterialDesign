@@ -690,11 +690,15 @@ body {
 .container:after,
 .container-fluid:before,
 .container-fluid:after,
+.row:before,
+.row:after,
 .clearfix:before,
 .clearfix:after{
   display: table;
   content: " ";
 }
+
+.row:after,
 .clearfix:after,
 .container:after,
 .container-fluid:after{
