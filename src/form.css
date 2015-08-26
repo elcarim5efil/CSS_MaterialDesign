@@ -1,0 +1,71 @@
+/*  input */
+.md-input {
+	overflow: hidden;
+	position: relative;
+	top: 10px;
+	left: 10px;
+	width: 300px;
+	height: 60px;
+	padding: 0;
+	margin: 0;
+}
+.md-input input {
+	display: block;
+	position: absolute;
+	bottom: 1em;
+	width: 100%;
+	border: 0;
+	outline: 0;
+}
+.md-input::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 2px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 2px solid #ddd;
+}
+.md-input input ::after {
+	left: 0%;
+	width: 100%;
+}
+
+.md-input > label {
+	position: absolute;
+	top: 0;
+	font-size: 1em;
+	color: #32C455;
+	transition: all .3s ease;
+}
+.md-input input:valid ~ label {
+	top: 0;
+	font-size: 1em;
+	color: #32C455;
+}
+.md-input input:invalid ~ label {
+	top: 1em;
+	font-size: 1.5em;
+	color: #ddd;
+}
+.md-input input:focus ~ label{
+	top: 0;
+	font-size: 1em;
+	color: #32C455;
+}
+.md-input span {
+	content: "";
+	position: absolute;
+	bottom: 2px;
+	height: 100%;
+	width: 0%;
+	left: 50%;
+	opacity: 0;
+	border-bottom: 2px solid #32C455;
+	transition: .3s all ease;
+}
+.md-input input:focus ~ span {
+	left: 0%;
+	width: 100%;
+	opacity: 1;
+}
