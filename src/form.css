@@ -1,0 +1,378 @@
+ /* ------ input box (required) ------- */
+.md-input {
+	position: relative;
+	overflow: hidden;
+	height: 60px;
+	padding: 0 15px;
+	cursor: text;
+	font: 1.2em;
+}
+.md-input.large {
+	height: 80px;
+}
+
+.md-input input {
+	display: block;
+	position: absolute;
+	bottom: 0.5em;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	font: inherit;
+}
+
+.md-input::before {
+	content: "";
+	position: absolute;
+	left: 2%;
+	bottom: 2px;
+	height: 100%;
+	width: 96%;
+	border-bottom: 2px solid #ddd;
+}
+
+.md-input > label {
+	position: absolute;
+	transition: all .3s ease;
+}
+
+.md-input input:invalid ~ label {
+	top: 2.5em;
+	font-size: 1em;
+	color: #ddd;
+}
+
+.md-input.large input:invalid ~ label {
+	top: 2em;
+	font-size: 1.6em;
+}
+
+.md-input > label,
+.md-input input:valid ~ label,
+.md-input input:focus ~ label {
+	top: 1em;
+	font-size: 1em;
+	color: #32C455;
+}
+
+
+.md-input.large > label,
+.md-input.large input:valid ~ label,
+.md-input.large input:focus ~ label {
+	top: 1.9em;
+	font-size: 1.2em;;
+}
+
+.md-input span {
+	content: "";
+	position: absolute;
+	bottom: 2px;
+	height: 100%;
+	width: 0;
+	left: 50%;
+	opacity: 0;
+	border-bottom: 2px solid #32C455;
+	transition: .3s all ease;
+}
+
+.md-input input:focus ~ span {
+	left: 2%;
+	width: 96%;
+	opacity: 1;
+}
+
+/*-------------- radio ---------------*/
+.md-radio {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.md-radio[type=radio] + label::after {
+	content: "";
+	display: inline-block;
+	cursor: pointer;
+	border: 2px solid #ddd;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	-webkit-transition: all .3s linear;
+	-moz-transition: all .3s linear;
+	transition: all .3s linear;
+}
+
+.md-radio[type=radio]:checked + label::after{
+	border-color: #32C455;
+}
+
+.md-radio[type=radio] + label::before {
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #ddd;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	top: 50%;
+	margin-top: -5px;
+	left: 48px;
+	opacity: 0;
+}
+
+.md-radio[type=radio]:hover + label::before,
+.md-radio + label:hover::before {
+	opacity: 1;
+}
+
+.md-radio[type=radio]:checked + label::before {
+	width: 12px;
+	height: 12px;
+	background-color: #32C455;
+	top: 50%;
+	margin-top: -9px;
+	left: 46px;
+	opacity: 1;
+}
+
+.md-radio + label > span {
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	top: 3px;
+	left: 70px;
+}
+
+/* --------------- checkbox ------------- */
+.md-checkbox {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	opacity: 0;
+}
+.md-checkbox[type=checkbox] + label::before {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+}
+.md-checkbox[type=checkbox] + label::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	margin-left: -24px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #aaa;
+}
+
+.md-checkbox[type=checkbox]:checked + label::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	height: 10px;
+	border-color: #32C455;
+	border-top-style: none;
+	border-right-style: none;
+}
+
+.md-checkbox + label > span {
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;
+	top: 2px;
+	left: 70px;
+}
+
+/* ------------ switch ------------ */
+.md-switch {
+	display: inline-block;
+	position: relative;
+	height: 20px;
+	cursor: pointer;
+	opacity: 0;
+}
+
+.md-switch[type=checkbox] + label{
+	position: relative;
+	cursor: pointer;
+	top: -8px;
+	left: 0;
+	width: 40px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	opacity: 1;
+	outline: 0;
+}
+
+.md-switch[type=checkbox] + label::before {
+	content: "";
+	position: absolute;
+	overflow: hidden;
+	left: 0px;
+	top: 0;
+	width: 40px;
+	height: 12px;
+	border-radius: 6px;
+	background-color: #32C455;
+	box-shadow: inset 0 0 100px 100px rgba(160,160,160,1);
+	transition: box-shadow .2s ease-in-out;
+}
+
+.md-switch[type=checkbox] + label::after {
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: -4px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #32C455;
+	box-shadow: inset 0 0 100px 100px rgba(240,240,240,1), 0 0 8px 1px rgba(0,0,0,0.4);
+	transition: all .2s ease-in-out;
+}
+
+.md-switch[type=checkbox]:checked + label::after {
+	box-shadow: inset 0 0 100px 100px rgba(200,200,200,0), 0 0 8px 1px rgba(0,0,0,0.4);
+	left: 20px;
+}
+
+.md-switch[type=checkbox]:checked + label::before {
+	box-shadow: inset 0 0 100px 100px rgba(255,255,255,0.5);
+}
+
+/* ------------------- range ---------------- */
+.md-range[type=range] {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	-webkit-appearance: none;
+}
+
+/* ---Webkit range--- */
+.md-range[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 4px;
+    background: #bbb;
+    border: none;
+    border-radius: 2px;
+}
+
+.md-range[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+   width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 0;
+	background-color: #32C455;
+    margin-top: -4px;
+}
+
+.md-range[type=range]:focus {
+    outline: none;
+}
+
+.md-range[type=range]:focus::-webkit-slider-runnable-track {
+    background: #bbb;
+}
+
+/* ---Firefox range--- */
+.md-range[type=range]::-moz-range-track {
+    height: 4px;
+    background: #bbb;
+    border: none;
+    border-radius: 2px;
+}
+
+.md-range[type=range]::-moz-range-thumb {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 0;
+	background-color: #32C455;
+	-moz-transition: all .5s ease-in-out;
+}
+
+/*hide the outline behind the border*/
+.md-range[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+/* ---IE range--- */
+
+/*controls styling of the sliders track before the slider thumb*/
+.md-range[type=range]::-ms-fill-lower {
+	background-color: #bbb;
+}
+
+/* same as above, but after the thumb */
+.md-range[type=range]::-ms-fill-upper {
+	background-color: #bbb;
+}
+
+/* controls styling of the tooltip of a slider */
+.md-range[type=range]::-ms-tooltip {
+}
+
+/* styles the sliders individual tracks */
+.md-range[type=range]::-ms-track {
+	height: 4px;
+	background: transparent;
+	border-color: transparent;
+	border-radius: 2px;
+	border-width: 4px 0;
+	color: transparent;
+}
+
+/* for the slider thumb itself. */
+.md-range[type=range]::-ms-thumb {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 0;
+	background-color: #32C455;
+	transition: all .5s ease-in-out;
+}
+
+
+/* --------------------- select --------------------*/
+.md-select {
+/*	display: block;
+	position: relative;
+	width: 100%;*/
+}
+.md-select > select {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 90%;
+	top: 0;
+	left: 5%;
+	height: 40px;
+	border: 0;
+	/*border-bottom: 2px solid #aaa;*/
+	color: red;
+}
+.md-select > span{
+	content: "";
+	position: absolute;
+	left: 2%;
+	bottom: 2px;
+	height: 100%;
+	width: 96%;
+	border-bottom: 2px solid #ddd;
+}
+/* ------------------- textarear ---------------- */
