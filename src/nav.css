@@ -1,7 +1,7 @@
 .nav {
 	display: block;
 	overflow: hidden;
-	width: 100%;
+	/*width: 100%;*/
 	color: #fff;
 	background-color: #40C038;
 	position: relative;
@@ -72,7 +72,7 @@
 .nav-side {
 	display: block;
 	overflow: hidden;
-	width: 200px;
+	/*width: 200px;*/
 	/*color: #000;*/
 	color: #fff;
 	background-color: #2AB5F4;

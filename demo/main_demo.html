@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="../src/grid.css">
+	<link rel="stylesheet" href="../src/addbutton.css">
+	<link rel="stylesheet" href="../src/button.css">
+	<link rel="stylesheet" href="../src/collection.css">
+	<link rel="stylesheet" href="../src/form.css">
+	<link rel="stylesheet" href="../src/nav.css">
+	<link rel="stylesheet" href="../src/progressbar.css">
+	<link rel="stylesheet" href="../src/color_theme.css">
+</head>
+
+<body>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background-color: #ddd;
+			color: #333;
+		}
+		header {
+			padding: 100px;
+			background-color: #4CAF50;
+			color: #fff;
+			text-align: center;
+		}
+		header h1{
+			font-size: 5em;
+		}
+		section {
+			margin: 0 5%;
+		}
+		footer {
+			background-color: #4CAF50;
+			padding: 50px;
+			text-align: right;
+			color: #fff;
+		}
+		footer a, footer a:visited, footer a:link{
+			text-decoration: none;
+		}
+		.container {
+			margin: 15px;
+			padding: 30px;
+			vertical-align: central;
+			box-shadow: 3px 3px 8px 2px rgba(0,0,0,.2);
+			background-color: #fff;
+		}
+		.container h2 {
+			font-size: 3em;
+			margin: 20px;
+		}
+		.container h3 {
+			font-size: 2em;
+			text-align: center;
+			margin: 40px;
+		}
+	</style>
+	<header>
+		<h1>CSS Material Design Style</h1>
+		<p>This is a Material Designe Style theme based on pure CSS3. The grid system is based on Bootstrap.</p>
+	</header>
+
+	<!-- Navigator -->
+	<nav class='nav'>
+		<ul>
+			<li><a href="#" class='nav-header'>Material Design</a></li>
+			<li><a href="#button">Button</a></li>
+			<li><a href="#addbutton">Addbutton</a></li>
+			<li><a href="#form">Form</a></li>
+			<li><a href="#progressbar">Progressbar</a></li>
+			<li><a href="#nav">Navigator</a></li>
+		</ul>
+	</nav>
+
+	<section>
+		<!-- Button Demo -->
+		<div id='button' class='container'>
+			<h2>Buttons</h2>
+			<div class='row'>
+				<h3>Normal Buttons</h3>
+				<div class='col-md-2 col-md-offset-3'>
+					<button class='md-btn'>default</button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-btn green'>default</button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-btn orange'>default</button>
+				</div>
+			</div>
+			<div class='row'>
+				<h3>Small Buttons</h3>
+				<div class='col-md-2 col-md-offset-3'>
+					<button class='md-btn md-btn-small'>small</button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-btn md-btn-small green'>small</button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-btn md-btn-small orange'>small</button>
+				</div>
+			</div>
+
+			<div class='row'>
+				<h3>Large Buttons</h3>
+				<div class='col-md-2 col-md-offset-3'>
+					<button class='md-btn md-btn-large'>large</button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-btn md-btn-large green'>large</button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-btn md-btn-large orange'>large</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Addbutton Demo -->
+		<div id='addbutton' class='container'>
+			<h2>Addbuttons</h2>
+			<div class='row'>
+				<h3>Default Addbuttons</h3>
+				<div class='col-md-2 col-md-offset-2'>
+					<button class='md-add'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add green'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add orange'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add red'></button>
+				</div>
+			</div>
+
+			<div class='row'>
+				<h3>Minus Addbuttons</h3>
+				<div class='col-md-2 col-md-offset-2'>
+					<button class='md-add md-min'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add md-min green'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add md-min orange'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add md-min red'></button>
+				</div>
+			</div>
+			
+			<div class='row'>
+				<h3>Small Addbuttons</h3>
+				<div class='col-md-2 col-md-offset-2'>
+					<button class='md-add md-add-small'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add md-add-small green'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add md-min md-add-small orange'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add md-min md-add-small red'></button>
+				</div>
+			</div>
+
+			<div class='row'>
+				<h3>Large Addbuttons</h3>
+				<div class='col-md-2 col-md-offset-2'>
+					<button class='md-add md-add-large'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add md-add-large green'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add md-min md-add-large orange'></button>
+				</div>
+				<div class='col-md-2'>
+					<button class='md-add md-min md-add-large red'></button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Form Demo -->
+		<div id='form' class='container'>
+			<h2>Form</h2>
+			<form action="">
+
+				<!-- Input -->
+				<div class='row'>
+					<h3>Input</h3>
+					<div class='md-input col-md-4 col-md-offset-1'>
+						<input id="account" type="text" value="" required>
+						<span></span>
+						<label for="account">Account</label>
+					</div>
+
+					<div class='md-input col-md-4 col-md-offset-1'>
+						<input id="password"type="password" value="" required>
+						<span></span>
+						<label for="password">Password</label>
+					</div>
+				</div>
+
+				<div class='row'>
+					<div class='md-input large col-md-10 col-md-offset-1'>
+						<input id="name" type="text" value="Nobody" required>
+						<span></span>
+						<label for="name">Name</label>
+					</div>
+				</div>
+				
+				<!-- Radio -->
+				<div class='row'>
+					<h3>Radio</h3>
+					<div class='col-md-1 col-md-offset-4'>
+						<input class='md-radio' type="radio" id='male' name='gender' checked="checked">
+						<label for="male"><span>male</span></label>
+					</div>
+					<div class='col-md-1'>
+						<input class='md-radio' type="radio" id='female' name='gender'>
+						<label for="female"><span>female</span></label>
+					</div>
+					<div class='col-md-1'>
+						<input class='md-radio' type="radio" id='secret' name='gender'>
+						<label for="secret"><span>secret</span></label>
+					</div>
+				</div>
+
+				<!-- Switch -->
+				<div class='row'>
+					<h3>Switch</h3>
+					<label for='sw1' class='col-md-1 col-md-offset-5'>Codding</label>
+					<div class='col-md-2 '>
+						<input class='md-switch' type="checkbox" id='sw1'>
+						<label for='sw1'></label>
+					</div>
+				</div>
+
+
+				<!-- Range slider -->
+				<div class='row'>
+					<h3>Range slider</h3>
+					<label for=""></label>
+					<div class='col-md-10 col-md-offset-1'>
+						<input class='md-range' type="range" min="0" max="100">
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<!-- Progressbar Demo -->
+		<div id='progressbar' class='container'>
+			<h2>Progressbar</h2>
+			<h3>Determinate Progressbar</h3>
+
+			<div class='row'>
+				<div class="md-progressbar red col-md-10 col-md-offset-1">
+					<div class="determinate" style="width:90%;"></div>
+				</div>
+			</div>
+
+			<h3>Indeterminate Progress Bar</h3>
+			<div class='row'>
+				<div class="md-progressbar col-md-10 col-md-offset-1">
+					<div class="indeterminate"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id='nav' class='container'>
+			<h2>Navigators</h2>
+
+
+			<div class='row'>
+				<h3>Navigator</h3>
+				<nav class='nav col-md-10 col-md-offset-1'>
+					<ul>
+						<li><a href="#0" class='nav-header'>HOME</a></li>
+						<li><a href="#1">Chapter 1</a></li>
+						<li><a href="#2">Chapter 2</a></li>
+						<li><a href="#3">Chapter 3</a></li>
+						<li><a href="#4">Chapter 4</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class='row'>
+				<h3>Side Navigator</h3>
+				<nav class='nav-side col-md-4 col-md-offset-4'>
+					<ul>
+						<a href="#0" class='nav-header'>HOME</a>
+						<a href="#1">Chapter 1</a>
+						<a href="#2">Chapter 2</a>
+						<a href="#3">Chapter 3</a>
+						<a href="#4">Chapter 4</a>
+					</ul>
+				</nav>
+			</div>
+			
+		</div>
+	</section>
+	
+	<!-- Footer Demo -->
+	<footer>
+		<p>created by elcarim 2015</p>
+		<p><a href="https://github.com/elcarim5efil/CSS_MaterialDesign" target="_blank">Github</a></p>
+	</footer>
+
+</body>
+</html>

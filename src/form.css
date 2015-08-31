@@ -24,7 +24,7 @@
 .md-input::before {
 	content: "";
 	position: absolute;
-	left: 2%;
+	left: 10px;
 	bottom: 2px;
 	height: 100%;
 	width: 96%;
@@ -76,7 +76,7 @@
 }
 
 .md-input input:focus ~ span {
-	left: 2%;
+	left: 10px;
 	width: 96%;
 	opacity: 1;
 }
@@ -119,7 +119,7 @@
 	transition: all .3s ease;
 	top: 50%;
 	margin-top: -5px;
-	left: 48px;
+	left: 41px;
 	opacity: 0;
 }
 
@@ -134,7 +134,7 @@
 	background-color: #32C455;
 	top: 50%;
 	margin-top: -9px;
-	left: 46px;
+	left: 38px;
 	opacity: 1;
 }
 
