@@ -1,0 +1,84 @@
+.md-wave::after {
+	content: "";
+}
+
+.md-wave:not(:active)::after {
+	content: "";
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	top: 50%;
+	left: 50%;
+	margin-left: -60px;
+	margin-top: -60px;
+	opacity: 0;
+	
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.3);
+
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat:no-repeat;
+
+	-o-animation: md-add-spread 0.7s linear;
+	-moz-animation: md-add-spread 0.7s linear;
+	-webkit-animation: md-add-spread 0.7s linear;
+	animation: md-add-spread 0.7s linear;
+}
+
+.md-wave-red:not(:active)::after  {
+	background-color: rgba(230, 58, 58, .8);
+}
+
+.md-wave-blue:not(:active)::after  {
+	background-color: rgba(75, 158, 251, .8);
+}
+
+.md-wave-green:not(:active)::after  {
+	background-color: rgba(129, 237, 86, .8);
+}
+
+.md-wave-yellow:not(:active)::after  {
+	background-color: rgba(250, 242, 90, .8);
+}
+
+@-o-keyframes md-add-spread{
+	0%{
+		transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+@-moz-keyframes md-add-spread{
+	0%{
+		transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+@-webkit-keyframes md-add-spread{
+	0%{
+		transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+@keyframes md-add-spread{
+	0%{
+		transform: scale(0.1);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
