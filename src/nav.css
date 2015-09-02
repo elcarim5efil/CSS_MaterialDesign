@@ -59,7 +59,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(255,255,255,0.25);
+	background-color: rgba(255,255,255,.25);
 	transition-property: opacity;
 	transition: .2s ease;
 	opacity: 0;
@@ -68,12 +68,11 @@
 .nav > ul > li > a:hover::after{
 	opacity: 1;
 }
+
 /* Side navigator*/
 .nav-side {
 	display: block;
 	overflow: hidden;
-	/*width: 200px;*/
-	/*color: #000;*/
 	color: #fff;
 	background-color: #2AB5F4;
 	padding: 0;
