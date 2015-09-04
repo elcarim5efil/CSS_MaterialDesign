@@ -16,11 +16,10 @@ So far, serval basic components are completed:
 - Collection
 - Form elements(Input, Switch, Checkbox, Radio, Rang Slider)
 - Wave Animaitons
- 
-you can check out the [demo](http://elcarim5efil.github.io/projects/CSS_MD/main_demo.html) on my personal page.
-- 
 
 
 But some of them is not fully avaible, because the background color cannot be changed with just a class selector(which means the background-color of a element is fixed).
 
 Besides making the MD Style purely in CSS3, I also want to make the HTML structure of the component more concise(using as less TAG as possbile for building a component). Somehow, there are lots of problem to achieve this goal, but I will try.
+
+you can check out the [demo](http://elcarim5efil.github.io/projects/CSS_MD/main_demo.html) on my personal page.
