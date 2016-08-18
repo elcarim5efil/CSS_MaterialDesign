@@ -1,0 +1,28 @@
+@import './util.mcss';
+
+$w = 2rem;
+$b = .2rem;
+
+.md-checkbox{
+    cursor:pointer;$size(0);margin:0;padding:0;
+    &[type=checkbox]+label{display:inline-block;$size($w);cursor:pointer;}
+    &[type=checkbox]+label::after{
+        content:"";display:block;position:absolute;
+        $size($w-2*$b);border:.2rem solid #aaa;
+        -webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;
+    }
+    &[type=checkbox]:checked+label::after{
+        height:$w/2;border-color:$default;border-top:none;border-right:none;
+	    -webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);
+        -o-transform: rotate(-45deg);transform: rotate(-45deg);
+    }
+    .md-default&[type=checkbox]:checked+label::after{border-color:$default;}
+    .md-orange&[type=checkbox]:checked+label::after{border-color:$orange;}
+    .md-green&[type=checkbox]:checked+label::after{border-color:$green;}
+    .md-red&[[type=checkbox]:checked+label::after{border-color:$red;}
+    .md-purple&[[type=checkbox]:checked+label::after{border-color:$purple;}
+    .md-pink&[[type=checkbox]:checked+label::after{border-color:$pink;}
+    .md-dark&[[type=checkbox]:checked+label::after{border-color:$dark;}
+    .md-bluegrey&[type=checkbox]:checked+label::after{border-color:$bluegrey;}
+
+}
