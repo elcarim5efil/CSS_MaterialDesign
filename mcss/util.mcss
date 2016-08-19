@@ -5,10 +5,12 @@ $size = ($width, $height) {
 }
 
 $default = #2196f3;
-$orange = #fa6f3e;
-$green = #4caf50;
-$red = #f44336;
-$purple = #d50059;
-$pink = #f50057;
-$dark = #212121;
-$bluegrey = #263238;
+
+$color = 'default' #2196f3,
+         'orange' #fa6f3f,
+         'green' #4caf50,
+         'red' #f44336,
+         'purple' #d50059,
+         'pink' #f50057,
+         'dark' #212121,
+         'bluegrey' #263238;
